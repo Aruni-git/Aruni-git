@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="&lt;destAccountId>" path="/account/&lt;srcAccountId>/send/&lt;destAccountId>" id="5c57ca41-035d-4b72-929c-a58b5e2f910f" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5c57ca41-035d-4b72-929c-a58b5e2f910ffileName">%3CdestAccountId%3E</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="40cb91ec-e229-473a-9859-60e2bbca8c78" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="b1636eeb-7f1b-499b-a07d-317881a2ad36" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://localhost:5000</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

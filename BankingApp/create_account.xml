@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="create_account" path="/account/create_account" id="97996795-75e9-4af1-8505-aacae2596db8" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="97996795-75e9-4af1-8505-aacae2596db8fileName">create_account</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="ab59d079-6f44-4e97-88e6-4ce092c90361" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="c6e08a52-2c19-46ba-977c-6a4ee08426a4" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://localhost:5000</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

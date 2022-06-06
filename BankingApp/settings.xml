@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="0461a074-aac9-4379-b19a-2e6a2e6595fc" name="BankingApp" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="0461a074-aac9-4379-b19a-2e6a2e6595fcfileName">BankingApp</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="BankingApp.json">
+    <con:part>
+      <con:url>BankingApp.json</con:url>
+      <con:content>{"openapi":"3.0.1","info":{"title":"BankingApp","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/user/create_user":{"post":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/account/create_account":{"post":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/account/&lt;accountId>/deposit":{"put":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/account/&lt;accountId>/withdraw":{"put":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/account/&lt;srcAccountId>/send/&lt;destAccountId>":{"put":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/account/{accountId}/balance":{"description":"","get":{"description":"","parameters":[{"name":"accountId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"Default response"}}},"parameters":[{"name":"accountId","in":"path","required":true}]}}}</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>http://localhost:5000</con:endpoint>
+  </con:endpoints>
+</con:interface>

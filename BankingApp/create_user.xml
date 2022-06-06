@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="create_user" path="/user/create_user" id="c4ebfa24-b1d2-45e3-bf24-56aa6e113de0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c4ebfa24-b1d2-45e3-bf24-56aa6e113de0fileName">create_user</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="e212dd12-762c-4655-8c74-2ec3d2e636be" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="37b59795-a535-4abc-b2ae-5069d9b9079a" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:5000</con:endpoint>
+      <con:request>{"first_name" : "Anastasia",
+"last_name" : "johny"}</con:request>
+      <con:originalUri>http://localhost/user/create_user</con:originalUri>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,8 @@
+BankingApp\create_user.xml
+BankingApp\create_account.xml
+BankingApp\deposit.xml
+BankingApp\withdraw.xml
+BankingApp\balance.xml
+BankingApp\%3CdestAccountId%3E.xml
+BankinAPpTestSuite\Verify_view_account_balance.xml
+BankinAPpTestSuite\VerifyCreateNewUser.xml

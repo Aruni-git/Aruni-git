@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="withdraw" path="/account/&lt;accountId>/withdraw" id="c959f9a6-0f7e-44c1-8b24-7670441da764" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c959f9a6-0f7e-44c1-8b24-7670441da764fileName">withdraw</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="9e66ab20-6663-4694-b13d-572cd30027d7" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="da531873-c533-41c1-a554-765152791114" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://localhost:5000</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

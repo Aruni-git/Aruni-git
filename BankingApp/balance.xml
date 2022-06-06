@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="balance" path="/account/{accountId}/balance" id="bfc7abdb-8fd0-4881-9305-757b19fe93b7" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bfc7abdb-8fd0-4881-9305-757b19fe93b7fileName">balance</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>accountId</con:name>
+      <con:style>TEMPLATE</con:style>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="Method 1" id="e40a18e1-ab3b-45bb-bf65-c27f50110e57" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>accountId</con:name>
+        <con:value/>
+        <con:style>TEMPLATE</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Request 1" id="0b4e62a0-52b3-47c4-9d69-1bcbcb87f378" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:5000</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://localhost/account/%3CaccountId%3Ebalance</con:originalUri>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="accountId" value="3f64d44b-cc5c-44e3-9f2a-c8481d99f8cc"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>accountId</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
