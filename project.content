@@ -4,5 +4,9 @@ BankingApp\deposit.xml
 BankingApp\withdraw.xml
 BankingApp\balance.xml
 BankingApp\%3CdestAccountId%3E.xml
-BankinAPpTestSuite\Verify_view_account_balance.xml
+BankinAPpTestSuite\Account.xml
 BankinAPpTestSuite\VerifyCreateNewUser.xml
+BankinAPpTestSuite\VerifyViewAccountBalance.xml
+BankinAPpTestSuite\VerifyDepositMoney.xml
+BankinAPpTestSuite\VerifyWindrawMoney.xml
+BankinAPpTestSuite\VerifySendMoney.xml

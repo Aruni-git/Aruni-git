@@ -8,9 +8,13 @@
     <con:settings/>
     <con:parameters/>
     <con:request name="Request 1" id="c6e08a52-2c19-46ba-977c-6a4ee08426a4" mediaType="application/json" postQueryString="false">
-      <con:settings/>
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
       <con:endpoint>http://localhost:5000</con:endpoint>
-      <con:request/>
+      <con:request>{
+	"user_id" : "3f432db4-d42e-4fec-9099-aebee2af9bc3"}</con:request>
+      <con:originalUri>http://localhost/account/create_account</con:originalUri>
       <con:credentials>
         <con:authType>No Authorization</con:authType>
       </con:credentials>

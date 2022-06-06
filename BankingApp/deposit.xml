@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="deposit" path="/account/&lt;accountId>/deposit" id="5a8e4707-31b7-4a2e-be7a-61d84e990174" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="deposit" path="/account/{accountId}/deposit" id="5a8e4707-31b7-4a2e-be7a-61d84e990174" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="5a8e4707-31b7-4a2e-be7a-61d84e990174fileName">deposit</con:setting>
   </con:settings>
-  <con:parameters/>
+  <con:parameters>
+    <con:parameter>
+      <con:name>accountId</con:name>
+      <con:style>TEMPLATE</con:style>
+    </con:parameter>
+  </con:parameters>
   <con:method name="Method 1" id="db68db5f-0544-4b7a-9bac-f74ee09939f4" method="PUT">
     <con:settings/>
-    <con:parameters/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>accountId</con:name>
+        <con:value/>
+        <con:style>TEMPLATE</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
     <con:request name="Request 1" id="3e8166fe-db52-441c-b83e-c12a5a711724" mediaType="application/json" postQueryString="false">
-      <con:settings/>
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
       <con:endpoint>http://localhost:5000</con:endpoint>
-      <con:request/>
+      <con:request>{
+	"amount" : "100"
+	}</con:request>
+      <con:originalUri>http://localhost/account/%3CaccountId%3E/deposit</con:originalUri>
       <con:credentials>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters/>
+      <con:parameters>
+        <con:entry key="accountId" value="e62cad6d-52bf-406b-ab6a-571eeccdf438"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>accountId</con:entry>
+      </con:parameterOrder>
     </con:request>
   </con:method>
 </con:resource>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="5a2ba1bc-6424-4260-9ef0-1ab163718e9c" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="VerifyWindrawMoney" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5a2ba1bc-6424-4260-9ef0-1ab163718e9cfileName">VerifyWindrawMoney</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="VerifyWithdrawMoney" id="8d65cecd-3d30-4869-ac80-bbf3f43a75b1">
+    <con:settings/>
+    <con:config service="BankingApp" resourcePath="/account/{accountId}/withdraw" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="VerifyWithdrawMoney" id="da531873-c533-41c1-a554-765152791114" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:5000</con:endpoint>
+        <con:request>{
+	"amount" : "50"
+	}</con:request>
+        <con:originalUri>http://localhost/account/e62cad6d-52bf-406b-ab6a-571eeccdf438/withdraw</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="126929ac-aeb1-4f5d-83de-95c118edb300" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="0f5e3a72-d271-4fb9-b8cf-e554e95ad967" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="accountId" value="e62cad6d-52bf-406b-ab6a-571eeccdf438"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>accountId</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

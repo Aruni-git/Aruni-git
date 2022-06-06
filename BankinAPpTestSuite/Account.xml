@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="24aa281e-85fe-4a12-ae6f-41d865eb77ec" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Account" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="24aa281e-85fe-4a12-ae6f-41d865eb77ecfileName">Account</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="VerifyCreatingBankAccount" id="bd1a8559-7948-4a64-9a5a-817123e759c5">
+    <con:settings/>
+    <con:config service="BankingApp" resourcePath="/account/create_account" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="VerifyCreatingBankAccount" id="c6e08a52-2c19-46ba-977c-6a4ee08426a4" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:5000</con:endpoint>
+        <con:request>{
+	"user_id" : "3f432db4-d42e-4fec-9099-aebee2af9bc3"}</con:request>
+        <con:originalUri>http://localhost/account/create_account</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="c8e03588-af89-40e3-a349-ef941a1c7061" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="458471d4-e844-4114-b989-43e64ec21752" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

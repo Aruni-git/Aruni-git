@@ -1,21 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="&lt;destAccountId>" path="/account/&lt;srcAccountId>/send/&lt;destAccountId>" id="5c57ca41-035d-4b72-929c-a58b5e2f910f" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="&lt;destAccountId>" path="/account/{srcAccountId}/send/{destAccountId}" id="5c57ca41-035d-4b72-929c-a58b5e2f910f" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="5c57ca41-035d-4b72-929c-a58b5e2f910ffileName">%3CdestAccountId%3E</con:setting>
   </con:settings>
-  <con:parameters/>
+  <con:parameters>
+    <con:parameter>
+      <con:name>srcAccountId</con:name>
+      <con:style>TEMPLATE</con:style>
+    </con:parameter>
+    <con:parameter>
+      <con:name>destAccountId</con:name>
+      <con:style>TEMPLATE</con:style>
+    </con:parameter>
+  </con:parameters>
   <con:method name="Method 1" id="40cb91ec-e229-473a-9859-60e2bbca8c78" method="PUT">
     <con:settings/>
-    <con:parameters/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>srcAccountId</con:name>
+        <con:value/>
+        <con:style>TEMPLATE</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>destAccountId</con:name>
+        <con:value/>
+        <con:style>TEMPLATE</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
     <con:request name="Request 1" id="b1636eeb-7f1b-499b-a07d-317881a2ad36" mediaType="application/json" postQueryString="false">
-      <con:settings/>
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
       <con:endpoint>http://localhost:5000</con:endpoint>
-      <con:request/>
+      <con:request>{
+	"amount" : "15"
+	}</con:request>
+      <con:originalUri>http://localhost/account/%3CsrcAccountId%3E/send/%3CdestAccountId%3E</con:originalUri>
       <con:credentials>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters/>
+      <con:parameters>
+        <con:entry key="destAccountId" value="2dff8c16-b82d-46fa-8761-457f4b0d431c"/>
+        <con:entry key="srcAccountId" value="e62cad6d-52bf-406b-ab6a-571eeccdf438"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>srcAccountId</con:entry>
+        <con:entry>destAccountId</con:entry>
+      </con:parameterOrder>
     </con:request>
   </con:method>
 </con:resource>

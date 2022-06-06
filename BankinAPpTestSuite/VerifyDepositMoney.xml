@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="31e3c842-8b82-4ced-a660-a77a1b774f88" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="VerifyDepositMoney" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="31e3c842-8b82-4ced-a660-a77a1b774f88fileName">VerifyDepositMoney</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="VerifyDepositMoney" id="52913929-b5bc-4659-a796-792a52b1252d">
+    <con:settings/>
+    <con:config service="BankingApp" resourcePath="/account/{accountId}/deposit" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="VerifyDepositMoney" id="3e8166fe-db52-441c-b83e-c12a5a711724" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:5000</con:endpoint>
+        <con:request>{
+	"amount" : "1000"
+	}</con:request>
+        <con:originalUri>http://localhost/account/%3CaccountId%3E/deposit</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="268c1698-60a3-463b-b760-59b30e56c0a7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="807fa3d5-365e-4530-9996-425b00a6dec8" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="accountId" value="e62cad6d-52bf-406b-ab6a-571eeccdf438e62cad6d-52bf-406b-ab6a-571eeccdf438"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>accountId</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

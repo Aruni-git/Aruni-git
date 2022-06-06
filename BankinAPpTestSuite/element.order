@@ -1,2 +1,6 @@
-Verify_view_account_balance.xml
+Account.xml
 VerifyCreateNewUser.xml
+VerifyViewAccountBalance.xml
+VerifyDepositMoney.xml
+VerifyWindrawMoney.xml
+VerifySendMoney.xml

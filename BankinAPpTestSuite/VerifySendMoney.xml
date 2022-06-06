@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="bdf8fca0-af12-4bdd-b621-7b0ad81f01d1" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="VerifySendMoney" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bdf8fca0-af12-4bdd-b621-7b0ad81f01d1fileName">VerifySendMoney</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="VerifySendMoney" id="1e8bf33f-c88d-4cc6-a77e-857c86179121">
+    <con:settings/>
+    <con:config service="BankingApp" resourcePath="/account/{srcAccountId}/send/{destAccountId}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="VerifySendMoney" id="b1636eeb-7f1b-499b-a07d-317881a2ad36" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:5000</con:endpoint>
+        <con:request>{
+	"amount" : "15"
+	}</con:request>
+        <con:originalUri>http://localhost/account/%3CsrcAccountId%3E/send/%3CdestAccountId%3E</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="e2c2e920-b583-49cc-9647-5c4382bfb694" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6afebc8c-e853-4a4d-8904-141e83e90080" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="destAccountId" value="2dff8c16-b82d-46fa-8761-457f4b0d431c"/>
+          <con:entry key="srcAccountId" value="e62cad6d-52bf-406b-ab6a-571eeccdf438"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>srcAccountId</con:entry>
+          <con:entry>destAccountId</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
